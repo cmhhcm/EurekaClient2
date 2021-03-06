@@ -24,10 +24,8 @@ public class EurekaClient2Controller {
     @Autowired
     private ParamsValidationRestTemplateClient restTemplateClient;
 
-/*
     @Autowired
     private ParamsValidationFeignClient feignClient;
-*/
 
     @GetMapping("/original_invoke")
     public ResponseVO invokeByOriginalMethod() {
@@ -49,12 +47,9 @@ public class EurekaClient2Controller {
 
     @GetMapping("/feign")
     public ResponseVO invokeByFeiginClient() {
-/*
         String result = feignClient.invokeParamsValidationService(new BookQueryCondition());
         log.info("feign invoke result is :{}", result);
         return ResponseVO.success(result);
-*/
-        return null;
     }
 
 }
